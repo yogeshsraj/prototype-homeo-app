@@ -1,131 +1,278 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
+/*Navigation Bar*/
 .right-menu li{
-    display: inline-block;
-    margin-top: 30px !important;
+  display: inline-block;
+  margin-top: 30px !important;
 }
 
 .right-menu li .fa{
-    font-size: 18px;
-    margin-right: 10px;
-    cursor: pointer;
+  font-size: 22px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .navbar-brand img{
-    width: 50px;
+  width: 300px;
 }
 
 .navbar-brand{
-    left: 50%;
-    top: 25px;
-    transform: translate(-50%);
-    position: absolute;
-}
-
-.header{
-    background: #f5f6fc;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+  position: absolute;
 }
 
 .navbar{
-    padding: 0 35px !important;
+  padding: 0 35px !important;
 }
 
 .navbar-toggler{
-    border: none !important;
-    outline:  none !important;
-    padding: 0 !important;
-    margin-top: 30px;
+  border: none !important;
+  outline:  none !important;
+  padding: 0 !important;
+  margin-top: 30px;
 }
 
-.navbar-toggler .a{
-    font-size: 30px;
-    cursor: pointer;
+.navbar-toggler .fa{
+  font-size: 30px;
+  cursor: pointer;
 }
 
+.nav-link{
+  font-size: 25px;
+  font-weight: bold;
+}
+/*Navigation Bar*/
+
+/*Banner*/
 .banner-img{
-    margin: 80px 115px;
-    width: 60%;
+  margin: 80px 115px;
+  width: 60%;
 }
 
 .banner-img img{
-    width: 100%;
-    margin-bottom: -80px;
+  width: 100%;
+  margin-bottom: -80px;
 }
 
 .banner{
-    position: relative;
+  position: relative;
 }
 
 .banner-title{
-    position: absolute;
-    left:65%;
-    top:25%
+  position: absolute;
+  left:50%;
+  top:20%
 }
 
 .banner-title h1{
-    font-size: 1.25rem;
-    font-weight: 300;
-    background-color:rgb(4, 74, 155);
-    color: #fff;
-    line-height: 30px;
-    padding: 0px 10px 0 10px;
+  font-size: 30px;
+  background:rgb(86,197,220);
+  color: #fff;
+  line-height: 50px;
+  padding: 0px 10px 0 10px;
 }
 
-/*About Us*/
+.banner-title h2{
+  font-size: 25px;
+  background:rgb(86,197,220);
+  color: #fff;
+  line-height: 40px;
+  padding: 0px 10px 0 10px;
+  text-align: right;
+}
+/*Banner*/
 
-.about-us{
-    padding: 40px 0;
+/*header*/
+.header{
+  background: #f5f6fc;
+}
+/*header*/
+
+/*Treatment*/
+.treatment{
+  padding: 100px 0;;
 }
 
-.aboutus-box{
-    margin: 80px 0;
+.treatment-box{
+  margin: 80px 0;;
 }
 
+/*Treatment Title Style Box*/
 .title-style h1{
-    padding: 25px 0;
+  padding: 40px 0;
 }
 
 .title-style{
-    margin: 0 auto 80px;
-    height: 80px;
-    width: 60%;
-    max-width: 700px;
-    background: white;
-    position: relative;
-    box-shadow: 0 4px 5px 0 rgba(0,0,50,0.5)
+  margin: 0 auto 80px;
+  height:120px;
+  width:80%;
+  max-width:700px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 50, 0.5);
 }
 
-.title-style::after{
-    content: '';
-    height:60px;
-    width:200px;
-    background-color: rgb(4, 74, 155);
-    position: absolute;
-    top:-10px;
-    left:-10px;
-    z-index: -1;
+.title-style::after
+{
+  content: '';
+  height:100px;
+  width:200px;
+  background-color:rgb(86,197,220);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
 }
 
-.title-style::before{
-    content: '';
-    height:60px;
-    width:200px;
-    background-color: rgb(0, 170, 37);
-    position: absolute;
-    bottom:-10px;
-    right:-10px;
-    z-index: -1;
+.title-style::before
+{
+  content: '';
+  height:100px;
+  width:200px;
+  background-color:rgb(86,197,220);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: -1;
+}
+/*Treatment Title Style Box*/
+
+/*Treatment Multi Image*/
+.treatment-img{
+  position: relative;
+  margin-bottom: 15px;
 }
 
-.vl {
-    border-left: 2px solid rgba(166, 166, 167, 0.26);
-    padding-right: 20px;
-  }
+.treatment-img img{
+  width:100%;
+}
 
-  #map{
-      height:500px;
-      width:75%
-  }
+.btn-knowmore{
+  width: 150px;
+  padding: 10px 0;
+  outline: none !important;
+  border: 0;
+  border-radius: 2px;
+  position: absolute;
+  background:#fff;
+  left:50%;
+  bottom:0;
+  transform: translate(-50%,0);
+  transition: .6s;
+  opacity: 0;
+  z-index: 1;
+}
+
+.treatment-img:hover .btn-knowmore {
+  transform: translate(-50%,50%);
+  bottom: 50%;
+  opacity: 1;
+}
+
+.overlay{
+  height:0;
+  width:100%;
+  background: #f5f6fc;
+  position: absolute;
+  top:0;
+  opacity:0;
+  transition: .5s;
+}
+
+.treatment-img:hover .overlay {
+  height:100%;
+  opacity: .5;
+}
+
+/*Treatment Multi Image*/
+
+
+/*Treatment*/
+
+
+/*AboutUs*/
+.aboutus{
+  background-image: url(../images/AbouUs.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.row{
+  margin:initial !important;
+}
+
+.aboutdoctor{
+  max-width: 500px;
+  margin-top:80px;
+  padding: 60px;
+  background: #ffffff8c;
+  margin-bottom: 20px;
+}
+
+.aboutdoctor a{
+  width: 150px;
+  display: block;
+  color: #fff !important;
+  background: #000;
+  text-decoration: none  !important;
+  padding:5px;
+  text-align: center;
+}
+
+.aboutus img{
+  width:300px;
+  height:400px;
+  margin:-100px;
+  margin-top: 150px;
+}
+/*AboutUs*/
+
+/*Testimonial*/
+/*Testimonial Title Style Box*/
+.testimonial-box{
+  margin: 180px 0;
+}
+.title-style-testimonial h1{
+  padding: 40px 0;
+}
+
+.title-style-testimonial{
+  margin: 0 auto 80px;
+  height:120px;
+  width:80%;
+  max-width:700px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 50, 0.5);
+}
+
+.title-style-testimonial::after
+{
+  content: '';
+  height:100px;
+  width:200px;
+  background-color:rgb(86,197,220);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+}
+
+.title-style-testimonial::before
+{
+  content: '';
+  height:100px;
+  width:200px;
+  background-color:rgb(86,197,220);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: -1;
+}
+/*Testimonial Title Style Box*/
+/*Testimonial*/
